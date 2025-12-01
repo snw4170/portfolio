@@ -1,0 +1,119 @@
+/* General structure and clean-up */
+html {
+    background-color: #292929;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6em; /* Increased line height for readability */
+    font-size: 1em;
+}
+
+/* Body container styles */
+body {
+    background-color: #2C2F33;
+    /* Simplified border to a clean solid line for modern look */
+    border: 1px solid #4093D3; 
+    /* width: 50%; (Kept this, but 60-75% can sometimes look better on large screens) */
+    width: 60%; /* Adjusted width slightly for better viewing */
+    margin: 20px auto; /* Added top/bottom margin for spacing */
+    color: #e9e9e9;
+    padding: 20px; /* Increased padding */
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px; /* Added rounded corners */
+}
+
+/* Content Box Styling - made it cleaner and more distinct */
+.content-box {
+    padding: 15px; /* Adjusted padding */
+    background-color: #292929;
+    border: 1px solid #4093D3; /* Clean solid border */
+    border-radius: 6px; /* Added rounded corners */
+    /* Added a subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Typography Hierarchy */
+h1 {
+    font-size: 2.5em;
+    color: #4093D3; /* Highlight the name */
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: #00b7ff; /* Updated heading color */
+    border-bottom: 2px solid #4093D3; /* A separator line for clarity */
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* List Style for Skills - to make them look tidier */
+.grid-item-skills ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+}
+
+.grid-item-skills li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #444; /* Subtle separation */
+}
+
+/* Grid Layout (Keep the original structure, but ensure consistency) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px; /* Increased gap for better spacing */
+    padding: 0; /* Removed padding here as it's on the body now */
+}
+
+.grid-item-title {
+    grid-column: 1 / 13;
+}
+
+.grid-item-about {
+    grid-column: 1 / 13;
+}
+
+.grid-item-education {
+    grid-column: 1 / 9;
+}
+
+.grid-item-skills {
+    grid-column: 9 / 13;
+}
+
+.grid-item-project {
+    grid-column: 1 / 13; /* Changed from 1/9 to 1/13 to give projects full width */
+}
+
+.grid-item-footer {
+    grid-column: 1 / 13;
+    text-align: center;
+    font-size: 0.9em;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+/***** LINKS - Kept your color scheme, but ensured smooth transitions *****/
+a:link {
+    color: rgb(0, 183, 255);
+    text-decoration: none; /* Removed default underline */
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+a:visited {
+    color: rgb(0, 133, 185);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(156, 227, 255);
+    text-decoration: underline; /* Add underline only on hover */
+}
+
+a:active {
+    color: rgb(255, 255, 255);
+}
